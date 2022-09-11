@@ -4,27 +4,27 @@ public class ConteoValorVector {
 
     public static void main(String[] args) {
         ConteoValorVector conteoValorVector = new ConteoValorVector();
-        int[] vector = {2,0,0,3,5,0,3};
-        conteoValorVector.dividePublico(vector);
-        //System.out.println(conteoValorVector.conteoPublico(vector, 2));
+        int[] vector = {2,0,0,3,2,0,3};
+        //conteoValorVector.dividePublico(vector);
+        System.out.println(conteoValorVector.conteoPublico(vector, 2));
     }
 
     public int conteoPublico(int[] vector, int valor){
         if(vector != null){
-            return conteoPrivado(vector, valor, 0);
+            return conteoPrivado(vector, valor, 0, vector.length);
         }
         return 0;
     }
 
-    private int conteoPrivado(int[] vector, int valor, int posicion){
+    private int conteoPrivado(int[] vector, int valor, int posicion, int tamanio){
         int conteo = 0;
         if(vector[posicion] == valor){
             conteo += 1;
         }
-        if(vector.length == posicion + 1){
+        if(tamanio == posicion + 1){
             return conteo;
         }
-        conteo += conteoPrivado(vector, valor, posicion + 1);
+        conteo += conteoPrivado(vector, valor, posicion + 1, tamanio);
         return conteo;
     }
 
