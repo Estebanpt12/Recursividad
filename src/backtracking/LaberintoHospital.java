@@ -37,7 +37,7 @@ public class LaberintoHospital {
             return;
         }
 
-        if(laberinto[x][y]=='1' || laberinto[x][y]=='V'){
+        if(laberinto[x][y]=='1' || laberinto[x][y]=='V' || laberinto[x][y]=='S'){
             return;
         }
 

@@ -3,10 +3,18 @@ package conteoValorVector;
 public class ConteoValorVector {
 
     public static void main(String[] args) {
-        ConteoValorVector conteoValorVector = new ConteoValorVector();
+        /*ConteoValorVector conteoValorVector = new ConteoValorVector();
         int[] vector = {2,0,0,3,2,0,3};
         //conteoValorVector.dividePublico(vector);
-        System.out.println(conteoValorVector.conteoPublico(vector, 2));
+        System.out.println(conteoValorVector.conteoPublico(vector, 2));*/
+        String a= null;
+        try {
+            a.charAt(0);
+        } catch (IndexOutOfBoundsException e) {
+            a.charAt(0);
+        }finally{
+            System.out.println("Hola");
+        }
     }
 
     public int conteoPublico(int[] vector, int valor){
@@ -45,5 +53,6 @@ public class ConteoValorVector {
         conteo += dividePrivado(vector, aux + 1, fin);
         conteo += dividePrivado(vector, inicio, aux);
         return conteo;
+
     }
 }
